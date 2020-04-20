@@ -48,7 +48,7 @@ int main() {
 
 		sum = 0;
 
-		/*long int matrix2[64];
+		short matrix2[64];
 
 		for (i = 0; i < 8; i++)
 			for (j = 0; j < 8; j++) {
@@ -78,7 +78,7 @@ int main() {
 		result = 0;
 		time2 = clock();
 		float asstime = (float)(time2 - time1);
-		printf("time work on Asm: %f ms\n", asstime);*/
+		printf("time work on Asm: %f ms\n", asstime);
 
 		short matrix2[64];
 
