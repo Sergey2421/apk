@@ -5,7 +5,7 @@
 
 
 int main() {
-	int matrix[8][8], i, j;
+	short matrix[8][8], i, j;
 	long int sum, result = 0, mmx = 0;		
 	long res = 0;
 	clock_t time1, time2;
