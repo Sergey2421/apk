@@ -91,24 +91,24 @@ void getRegisterValue()
 void init()
 {
 	// IRQ0-7
-	oldHandle08 = getvect(0x08);        // Таймер
-	oldHandle09 = getvect(0x09);        // Клавиатура
-	oldHandle0A = getvect(0x0A);		// Каскадное подключение 2го контроллера
-	oldHandle0B = getvect(0x0B);	    // Порт СОМ2
-	oldHandle0C = getvect(0x0C);	    // Порт СОМ1
-	oldHandle0D = getvect(0x0D); 	    // Параллельный порт LPT2
-	oldHandle0E = getvect(0x0E); 	    // Контроллер флоппи-дисководов
-	oldHandle0F = getvect(0x0F);	    // Параллельный порт LPT1
+	oldHandle08 = getvect(0x08);        // Г’Г Г©Г¬ГҐГ°
+	oldHandle09 = getvect(0x09);        // ГЉГ«Г ГўГЁГ ГІГіГ°Г 
+	oldHandle0A = getvect(0x0A);		// ГЉГ Г±ГЄГ Г¤Г­Г®ГҐ ГЇГ®Г¤ГЄГ«ГѕГ·ГҐГ­ГЁГҐ 2ГЈГ® ГЄГ®Г­ГІГ°Г®Г«Г«ГҐГ°Г 
+	oldHandle0B = getvect(0x0B);	    // ГЏГ®Г°ГІ Г‘ГЋГЊ2
+	oldHandle0C = getvect(0x0C);	    // ГЏГ®Г°ГІ Г‘ГЋГЊ1
+	oldHandle0D = getvect(0x0D); 	    // ГЏГ Г°Г Г«Г«ГҐГ«ГјГ­Г»Г© ГЇГ®Г°ГІ LPT2
+	oldHandle0E = getvect(0x0E); 	    // ГЉГ®Г­ГІГ°Г®Г«Г«ГҐГ° ГґГ«Г®ГЇГЇГЁ-Г¤ГЁГ±ГЄГ®ГўГ®Г¤Г®Гў
+	oldHandle0F = getvect(0x0F);	    // ГЏГ Г°Г Г«Г«ГҐГ«ГјГ­Г»Г© ГЇГ®Г°ГІ LPT1
 
 	// IRQ8-15
-	oldHandle70 = getvect(0x70);		// Часы реального времени
-	oldHandle71 = getvect(0x71);	    // Свободен/зарезервирован
-	oldHandle72 = getvect(0x72);	    // Контроллер видеоадаптера
-	oldHandle73 = getvect(0x73);		// Свободен/зарезервирован
-	oldHandle74 = getvect(0x74);		// Мышь PS/2
-	oldHandle75 = getvect(0x75);		// Математический сопроцессор
-	oldHandle76 = getvect(0x76);		// Первый контроллер жесткого диска
-	oldHandle77 = getvect(0x77);		// Второй контроллер жесткого диска
+	oldHandle70 = getvect(0x70);		// Г—Г Г±Г» Г°ГҐГ Г«ГјГ­Г®ГЈГ® ГўГ°ГҐГ¬ГҐГ­ГЁ
+	oldHandle71 = getvect(0x71);	    // Г‘ГўГ®ГЎГ®Г¤ГҐГ­/Г§Г Г°ГҐГ§ГҐГ°ГўГЁГ°Г®ГўГ Г­
+	oldHandle72 = getvect(0x72);	    // ГЉГ®Г­ГІГ°Г®Г«Г«ГҐГ° ГўГЁГ¤ГҐГ®Г Г¤Г ГЇГІГҐГ°Г 
+	oldHandle73 = getvect(0x73);		// Г‘ГўГ®ГЎГ®Г¤ГҐГ­/Г§Г Г°ГҐГ§ГҐГ°ГўГЁГ°Г®ГўГ Г­
+	oldHandle74 = getvect(0x74);		// ГЊГ»ГёГј PS/2
+	oldHandle75 = getvect(0x75);		// ГЊГ ГІГҐГ¬Г ГІГЁГ·ГҐГ±ГЄГЁГ© Г±Г®ГЇГ°Г®Г¶ГҐГ±Г±Г®Г°
+	oldHandle76 = getvect(0x76);		// ГЏГҐГ°ГўГ»Г© ГЄГ®Г­ГІГ°Г®Г«Г«ГҐГ° Г¦ГҐГ±ГІГЄГ®ГЈГ® Г¤ГЁГ±ГЄГ 
+	oldHandle77 = getvect(0x77);		// Г‚ГІГ®Г°Г®Г© ГЄГ®Г­ГІГ°Г®Г«Г«ГҐГ° Г¦ГҐГ±ГІГЄГ®ГЈГ® Г¤ГЁГ±ГЄГ 
 
 	setvect(0x80, newHandle08);
 	setvect(0x81, newHandle09);
